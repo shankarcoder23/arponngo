@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arpon NGO</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="aseets/index.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-success" href="#">Arpon NGO</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        <li class="nav-item">
+          <a class="btn btn-donate ms-3" href="#">Donate</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <img src="aseets/image/NGO-health.img" class="hero-img" alt="NGO Work">
+
+  <div class="container">
+    <h1>A Promise of Care for Every Life</h1>
+    <p>Supporting Health, Education & Community Development</p>
+    <a href="#" class="btn btn-light mt-3">Join Us</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="aseets/image/Health.png" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold">About Our NGO</h2>
+        <p>
+          We are dedicated to improving lives through healthcare, education,
+          and community support programs. Our mission is to create a better
+          future for underprivileged communities.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Our Work</h2>
+
+    <div class="row g-4" id="galleryContainer">
+
+      <!-- Item -->
+      <div class="col-md-4 gallery-item">
+        <div class="card gallery-card">
+          <img src="aseets/image/dc-kids.jpg"
+               class="card-img-top gallery-img"
+               data-title="Medical Camp"
+               data-date="Jan 2026">
+          <div class="card-body">
+            <h5>Medical Camp</h5>
+            <p class="text-muted">Date: Jan 2026</p>
+          </div>
+        </div>
+      </div>
+
+           <div class="col-md-4 gallery-item">
+        <div class="card gallery-card">
+          <img src="aseets/image/dc-kids.jpg"
+               class="card-img-top gallery-img"
+               data-title="Medical Camp"
+               data-date="Jan 2026">
+          <div class="card-body">
+            <h5>Medical Camp</h5>
+            <p class="text-muted">Date: Jan 2026</p>
+          </div>
+        </div>
+      </div>
+
+           <div class="col-md-4 gallery-item">
+        <div class="card gallery-card">
+          <img src="aseets/image/dc-kids.jpg"
+               class="card-img-top gallery-img"
+               data-title="Medical Camp"
+               data-date="Jan 2026">
+          <div class="card-body">
+            <h5>Medical Camp</h5>
+            <p class="text-muted">Date: Jan 2026</p>
+          </div>
+        </div>
+      </div>
+
+          <div class="col-md-4 gallery-item">
+        <div class="card gallery-card">
+          <img src="aseets/image/dc-kids.jpg"
+               class="card-img-top gallery-img"
+               data-title="Medical Camp"
+               data-date="Jan 2026">
+          <div class="card-body">
+            <h5>Medical Camp</h5>
+            <p class="text-muted">Date: Jan 2026</p>
+          </div>
+        </div>
+      </div>
+
+           <div class="col-md-4 gallery-item">
+        <div class="card gallery-card">
+          <img src="aseets/image/dc-kids.jpg"
+               class="card-img-top gallery-img"
+               data-title="Medical Camp"
+               data-date="Jan 2026">
+          <div class="card-body">
+            <h5>Medical Camp</h5>
+            <p class="text-muted">Date: Jan 2026</p>
+          </div>
+        </div>
+      </div>
+
+           <div class="col-md-4 gallery-item">
+        <div class="card gallery-card">
+          <img src="aseets/image/dc-kids.jpg"
+               class="card-img-top gallery-img"
+               data-title="Medical Camp"
+               data-date="Jan 2026">
+          <div class="card-body">
+            <h5>Medical Camp</h5>
+            <p class="text-muted">Date: Jan 2026</p>
+          </div>
+        </div>
+      </div>
+
+           <div class="col-md-4 gallery-item">
+        <div class="card gallery-card">
+          <img src="aseets/image/dc-kids.jpg"
+               class="card-img-top gallery-img"
+               data-title="Medical Camp"
+               data-date="Jan 2026">
+          <div class="card-body">
+            <h5>Medical Camp</h5>
+            <p class="text-muted">Date: Jan 2026</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <nav class="mt-5">
+      <ul class="pagination justify-content-center" id="pagination"></ul>
+    </nav>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img id="modalImage" class="img-fluid rounded mb-3">
+        <h5 id="modalTitle"></h5>
+        <p id="modalDate" class="text-muted"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Contact Us</h2>
+
+    <div class="row">
+
+      <!-- Form -->
+      <div class="col-md-6">
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Your Name">
+          <input type="email" class="form-control mb-3" placeholder="Your Email">
+          <textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
+          <button class="btn btn-donate">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Google Map -->
+      <div class="col-md-6">
+        <iframe 
+          src="https://maps.google.com/maps?q=guwahati&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-3">
+  <p>© 2026 Arpon NGO | All Rights Reserved</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="aseets/js/gallery.js"></script>
+
+</body>
+</html>
