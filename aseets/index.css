@@ -1,3 +1,5 @@
+
+
 /* Colors */
 :root {
   --primary: #8bc343;
@@ -12,6 +14,31 @@ body {
 /* Navbar */
 .navbar-brand {
   color: var(--primary) !important;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4CAF50;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
 }
 
 /* Donate Button */
