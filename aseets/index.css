@@ -24,7 +24,7 @@ body {
 
 .btn-donate:hover {
   background: var(--primary);
-  color: #fcfeff;
+  color: #d6e5ec;
 }
 
 
@@ -64,7 +64,16 @@ body {
   position: relative;
   z-index: 3;
   text-align: center;
-  color: #1b9feb;
+  color: #dee5e9;
+}
+.hero .btn {
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: translateY(-5px);
+  background-color: #4CAF50;
+  color: #fff;
 }
 
 /* Improve visibility */
@@ -108,4 +117,8 @@ body {
 footer {
   background: var(--secondary);
   color: white;
+}
+footer a:hover {
+  color: #4CAF50;
+  transition: 0.3s;
 }
