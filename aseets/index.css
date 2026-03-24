@@ -149,3 +149,27 @@ footer a:hover {
   color: #4CAF50;
   transition: 0.3s;
 }
+
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero {
+    height: 75vh;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+}
