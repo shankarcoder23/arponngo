@@ -1,0 +1,25 @@
+/* Hero Section */
+.about-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('../assets/image/about-banner.jpg') center/cover no-repeat;
+  margin-top: 70px;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(to right, #8bc343, #2a93c0);
+}
+
+/* Card Hover */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 40vh;
+  }
+}
