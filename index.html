@@ -8,35 +8,109 @@
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="aseets/index.css">
 </head>
 <body style="background: linear-gradient(to right, #9cbee0, #509c53be, #a0c6ec);">
 
+  <!-- Top Bar -->
+<div class="top-bar d-flex justify-content-between align-items-center px-3 px-lg-5">
+  
+  <!-- Social -->
+   <div class="social-icons">
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="twitter"><i class="bi bi-x"></i></a>
+      <a href="#" class="youtube"><i class="bi bi-youtube"></i></a>
+      <a href="#" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
+  <!-- Donate Button -->
+  <a href="#" class="btn btn-donate-top">Donate Now</a>
+</div>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center fw-bold text-success" href="#">
-  <img src="aseets/image/Arpan-NGO-Logo-50.png" alt="Arpon NGO Logo" width="50" height="50" class="me-2">
-  
-</a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center fw-bold text-success" href="#">
+      <img src="aseets/image/Arpan-NGO-Logo-50.png" width="50" class="me-2">
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler custom-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
+    <!-- Menu -->
     <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
         <li class="nav-item">
-          <a class="btn btn-donate ms-3" href="#">Donate</a>
+          <a class="nav-link active" href="#">
+            <i class="bi bi-house-door me-1 d-lg-none"></i> Home
+          </a>
         </li>
+
+        <!-- Our Work -->
+        <li class="nav-item dropdown">
+        <a class="nav-link d-flex align-items-center" data-bs-toggle="dropdown">
+  <i class="bi bi-images me-1 d-lg-none"></i>
+  Our Work
+  <i class="bi bi-chevron-down ms-1 dropdown-arrow"></i>
+</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Photos</a></li>
+            <li><a class="dropdown-item" href="#">Videos</a></li>
+          </ul>
+        </li>
+
+        <!-- Causes -->
+        <li class="nav-item dropdown">
+          <a class="nav-link d-flex align-items-center" data-bs-toggle="dropdown">
+  <i class="bi bi-images me-1 d-lg-none"></i>
+  Causes
+  <i class="bi bi-chevron-down ms-1 dropdown-arrow"></i>
+</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Healthcare</a></li>
+            <li><a class="dropdown-item" href="#">Education</a></li>
+          </ul>
+        </li>
+
+        <!-- Get Involved -->
+        <li class="nav-item dropdown">
+          <a class="nav-link d-flex align-items-center" data-bs-toggle="dropdown">
+  <i class="bi bi-images me-1 d-lg-none"></i>
+  Get Involved
+  <i class="bi bi-chevron-down ms-1 dropdown-arrow"></i>
+</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Volunteer</a></li>
+            <li><a class="dropdown-item" href="#">Partner With Us</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">
+            <i class="bi bi-info-circle me-1 d-lg-none"></i> About Us
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">
+            <i class="bi bi-envelope me-1 d-lg-none"></i> Contact Us
+          </a>
+        </li>
+
       </ul>
     </div>
+
   </div>
 </nav>
 
@@ -52,20 +126,54 @@
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-5">
+<section id="about" class="about-section py-5">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <img src="aseets/image/Health.png" class="img-fluid rounded">
+    <div class="row align-items-center g-4">
+
+      <!-- Image -->
+      <div class="col-lg-6 text-center">
+        <div class="about-img-wrapper">
+          <img src="aseets/image/Arpan-about.png" class="img-fluid rounded-4 shadow" alt="NGO Work">
+        </div>
       </div>
-      <div class="col-md-6">
-        <h2 class="fw-bold text-white">About Our NGO</h2>
-        <p class="text-white">
-          We are dedicated to improving lives through healthcare, education,
-          and community support programs. Our mission is to create a better
-          future for underprivileged communities.
-        </p>
+
+      <!-- Content -->
+      <div class="col-lg-6">
+        <div class="about-card p-4 p-md-5">
+
+          <h6 class="text-white fw-semibold mb-2">About our NGO </h6>
+          <h2 class="fw-bold mb-3">Building Hope, Changing Lives</h2>
+
+          <p class="text-muted">
+            We are dedicated to improving lives through healthcare, education,
+            and community support programs. Our mission is to create a better
+            future for underprivileged communities.
+          </p>
+
+          <!-- Stats -->
+          <div class="row text-center my-4">
+            <div class="col-4">
+              <h4 class="fw-bold text-success">10K+</h4>
+              <small class="text-muted">Lives Impacted</small>
+            </div>
+            <div class="col-4">
+              <h4 class="fw-bold text-success">50+</h4>
+              <small class="text-muted">Projects</small>
+            </div>
+            <div class="col-4">
+              <h4 class="fw-bold text-success">100+</h4>
+              <small class="text-muted">Volunteers</small>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <a href="#" class="btn btn-success px-4 py-2 rounded-pill">
+            Learn More
+          </a>
+
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -75,106 +183,115 @@
   <div class="container">
     <h2 class="text-center fw-bold mb-5">Our Work</h2>
 
-    <div class="row g-4" id="galleryContainer">
+    <!-- Carousel -->
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
 
-      <!-- Item -->
-      <div class="col-md-4 gallery-item">
-        <div class="card gallery-card">
-          <img src="aseets/image/dc-kids.jpg"
-               class="card-img-top gallery-img"
-               data-title="Medical Camp"
-               data-date="Jan 2026">
-          <div class="card-body">
-            <h5>Medical Camp</h5>
-            <p class="text-muted">Date: Jan 2026</p>
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="gallery-card">
+                <img src="aseets/image/1.png" class="img-fluid gallery-img"
+                  data-title="Medical Camp" data-date="Jan 2026">
+              </div>
+            </div>
+
+            <div class="col-md-4 d-none d-md-block">
+              <div class="gallery-card">
+                <img src="aseets/image/3.png" class="img-fluid gallery-img"
+                  data-title="Medical Camp" data-date="Jan 2026">
+              </div>
+            </div>
+
+            <div class="col-md-4 d-none d-md-block">
+              <div class="gallery-card">
+                <img src="aseets/image/2.png" class="img-fluid gallery-img"
+                  data-title="Medical Camp" data-date="Jan 2026">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-           <div class="col-md-4 gallery-item">
-        <div class="card gallery-card">
-          <img src="aseets/image/dc-kids.jpg"
-               class="card-img-top gallery-img"
-               data-title="Medical Camp"
-               data-date="Jan 2026">
-          <div class="card-body">
-            <h5>Medical Camp</h5>
-            <p class="text-muted">Date: Jan 2026</p>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="gallery-card">
+                <img src="aseets/image/4.png" class="img-fluid gallery-img"
+                  data-title="Health Checkup" data-date="Feb 2026">
+              </div>
+            </div>
+
+            <div class="col-md-4 d-none d-md-block">
+              <div class="gallery-card">
+                <img src="aseets/image/5.png" class="img-fluid gallery-img"
+                  data-title="Awareness Program" data-date="Mar 2026">
+              </div>
+            </div>
+
+            <div class="col-md-4 d-none d-md-block">
+              <div class="gallery-card">
+                <img src="aseets/image/6.png" class="img-fluid gallery-img"
+                  data-title="Community Help" data-date="Apr 2026">
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
 
-           <div class="col-md-4 gallery-item">
-        <div class="card gallery-card">
-          <img src="aseets/image/dc-kids.jpg"
-               class="card-img-top gallery-img"
-               data-title="Medical Camp"
-               data-date="Jan 2026">
-          <div class="card-body">
-            <h5>Medical Camp</h5>
-            <p class="text-muted">Date: Jan 2026</p>
-          </div>
-        </div>
-      </div>
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+      </button>
+    </div>
+<!-- View More Button (ONLY for opening) -->
+<div class="text-center mt-4" id="viewMoreWrapper">
+  <button class="btn btn-success px-4 py-2" id="viewMoreBtn">View More</button>
+</div>
 
-          <div class="col-md-4 gallery-item">
-        <div class="card gallery-card">
-          <img src="aseets/image/dc-kids.jpg"
-               class="card-img-top gallery-img"
-               data-title="Medical Camp"
-               data-date="Jan 2026">
-          <div class="card-body">
-            <h5>Medical Camp</h5>
-            <p class="text-muted">Date: Jan 2026</p>
-          </div>
-        </div>
-      </div>
+<!-- Full Gallery (Hidden Initially) -->
+<div class="container mt-5 d-none" id="fullGallerySection">
 
-           <div class="col-md-4 gallery-item">
-        <div class="card gallery-card">
-          <img src="aseets/image/dc-kids.jpg"
-               class="card-img-top gallery-img"
-               data-title="Medical Camp"
-               data-date="Jan 2026">
-          <div class="card-body">
-            <h5>Medical Camp</h5>
-            <p class="text-muted">Date: Jan 2026</p>
-          </div>
-        </div>
-      </div>
+  <div class="row g-4">
 
-           <div class="col-md-4 gallery-item">
-        <div class="card gallery-card">
-          <img src="aseets/image/dc-kids.jpg"
-               class="card-img-top gallery-img"
-               data-title="Medical Camp"
-               data-date="Jan 2026">
-          <div class="card-body">
-            <h5>Medical Camp</h5>
-            <p class="text-muted">Date: Jan 2026</p>
-          </div>
-        </div>
+    <div class="col-md-4 col-12">
+      <div class="gallery-card">
+        <img src="aseets/image/2.png" class="img-fluid gallery-img"
+          data-title="Medical Camp" data-date="Jan 2026">
       </div>
-
-           <div class="col-md-4 gallery-item">
-        <div class="card gallery-card">
-          <img src="aseets/image/dc-kids.jpg"
-               class="card-img-top gallery-img"
-               data-title="Medical Camp"
-               data-date="Jan 2026">
-          <div class="card-body">
-            <h5>Medical Camp</h5>
-            <p class="text-muted">Date: Jan 2026</p>
-          </div>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Pagination -->
-    <nav class="mt-5">
-      <ul class="pagination justify-content-center" id="pagination"></ul>
-    </nav>
+    <div class="col-md-4 col-12">
+      <div class="gallery-card">
+        <img src="aseets/image/5.png" class="img-fluid gallery-img"
+          data-title="Health Drive" data-date="Feb 2026">
+      </div>
+    </div>
+
+    <div class="col-md-4 col-12">
+      <div class="gallery-card">
+        <img src="aseets/image/4.png" class="img-fluid gallery-img"
+          data-title="Community Support" data-date="Mar 2026">
+      </div>
+    </div>
+
+    <!-- Add more images same way -->
+
+  </div>
+
+  <!-- Show Less Button (BOTTOM ONLY ✅) -->
+  <div class="text-center mt-5">
+    <button class="btn btn-outline-success px-4 py-2" id="showLessBtn">
+      Show Less
+    </button>
+  </div>
+
+</div>
 
   </div>
 </section>
@@ -192,6 +309,58 @@
   </div>
 </div>
 
+<!-- Stories of Impact Section -->
+<section id="impact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Stories of Impact</h2>
+
+    <div class="row g-4">
+
+      <!-- Story 1 -->
+      <div class="col-md-4">
+        <div class="impact-card">
+          <img src="assets/image/story1.jpg" class="img-fluid" alt="">
+          <div class="impact-content">
+            <h5>Empowering Education</h5>
+            <p>We helped 200+ children return to school with proper learning resources.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div class="col-md-4">
+        <div class="impact-card">
+          <img src="assets/image/story2.jpg" class="img-fluid" alt="">
+          <div class="impact-content">
+            <h5>Healthcare for All</h5>
+            <p>Organized free health camps benefiting over 500 families in rural areas.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 3 -->
+      <div class="col-md-4">
+        <div class="impact-card">
+          <img src="assets/image/story3.jpg" class="img-fluid" alt="">
+          <div class="impact-content">
+            <h5>Women Empowerment</h5>
+            <p>Provided skill training programs helping women become financially independent.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-success px-4 py-2">View All Stories</a>
+    </div>
+  </div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="py-5">
   <div class="container">
@@ -204,11 +373,16 @@
         <form>
           <input type="text" class="form-control mb-3" placeholder="Your Name">
           <input type="email" class="form-control mb-3" placeholder="Your Email">
+          
+          <!-- Address Field -->
+          <input type="text" class="form-control mb-3" placeholder="Your Address">
+
           <textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
-          <button class="btn btn-donate">Send Message</button>
+       <button class="btn-send">
+  <i class="bi bi-send me-2"></i> Send Message
+</button>
         </form>
       </div>
-
       <!-- Google Map -->
       <div class="col-md-6">
         <iframe 

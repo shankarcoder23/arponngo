@@ -11,49 +11,160 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Navbar */
-.navbar-brand {
-  color: var(--primary) !important;
-}
-
-.navbar-nav .nav-link {
-  position: relative;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background-color: #4CAF50;
-  transition: width 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #4CAF50;
-}
-
-.navbar-nav .nav-link:hover::after {
+/* Top Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 1050;
+  background: linear-gradient(to right, #b0e0f5, #2a6b3e);
+  color: #286dbd;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.top-bar a:hover {
+  color: #f5fbff;
+}
+/* SOCIAL ICON COLORS (OFFICIAL BRAND COLORS) */
+
+.social-icons a {
+  font-size: 18px;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+/* Facebook */
+.social-icons a.facebook {
+  color: #1877F2;
+}
+
+/* Instagram */
+.social-icons a.instagram {
+  color: #E4405F;
+}
+
+/* Twitter (X) */
+.social-icons a.twitter {
+  color: #000000;
+}
+
+/* YouTube */
+.social-icons a.youtube {
+  color: #FF0000;
+}
+
+/* WhatsApp */
+.social-icons a.whatsapp {
+  color: #25D366;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+  transform: scale(1.2);
 }
 
 /* Donate Button */
-.btn-donate {
-  background: var(--secondary);
+.btn-donate-top {
+  background: linear-gradient(45deg, #69080d, #000000);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 15px;
   color: #fff;
-  border-radius: 25px;
-  padding: 8px 20px;
+  transition: 0.3s;
 }
 
-.btn-donate:hover {
-  background: var(--primary);
-  color: #d6e5ec;
+.btn-donate-top:hover {
+  transform: scale(1.1);
 }
 
+/* Navbar Fix after topbar */
+.navbar {
+  top: 45px;
+}
+
+/* Mobile Icons */
+.nav-link i {
+  font-size: 18px;
+}
+
+/* Custom Hamburger */
+.custom-toggler {
+  border: none;
+  outline: none;
+}
+
+.custom-toggler span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background: #28a745;
+  transition: 0.3s;
+}
+
+/* Animation */
+.custom-toggler:hover span {
+  background: #000;
+}
+
+/* Dropdown Smooth */
+.dropdown-menu {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* NAV LINK UNDERLINE ANIMATION */
+.navbar .nav-link {
+  position: relative;
+  color: #333;
+  transition: 0.3s;
+}
+
+/* underline hidden */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #198754; /* Bootstrap success color */
+  transition: width 0.3s ease;
+}
+
+/* hover effect */
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* active link underline */
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* optional active color */
+.navbar .nav-link.active {
+  color: #198754 !important;
+}
+
+
+/* DROPDOWN HOVER (Desktop only) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
 
 /* Hero Section */
 .hero {
@@ -113,32 +224,101 @@ body {
   font-size: 1.2rem;
 }
 
-/* Gallery Hover */
 .gallery-card {
-  transition: 0.3s;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
 }
-.gallery-card:hover {
+
+.gallery-img {
+  width: 100%;
+  transition: transform 0.4s ease;
+  border-radius: 15px;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.1);
+}
+
+/* Dark overlay */
+.gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+.gallery-card:hover::after {
+  opacity: 1;
+}
+
+/* Button style */
+#viewMoreBtn {
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* Stories of impact */
+.impact-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.impact-card img {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.impact-content {
+  padding: 20px;
+}
+
+.impact-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.impact-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.impact-card:hover {
   transform: translateY(-8px);
 }
 
-/* Image Hover */
-.gallery-img {
-  cursor: pointer;
-  transition: 0.3s;
-}
-.gallery-img:hover {
-  transform: scale(1.05);
+.impact-card:hover img {
+  transform: scale(1.1);
 }
 
-/* Pagination Style */
-.pagination .page-link {
-  color: #2a93c0;
-}
-
-.pagination .active .page-link {
-  background: #8bc343;
-  border-color: #8bc343;
+/* Animated Send message Button */
+.btn-send {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(45deg, #28a745, #20c997);
   color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 /* Footer */
 footer {
@@ -151,25 +331,16 @@ footer a:hover {
 }
 
 
-/* Mobile */
-@media (max-width: 576px) {
-  .hero {
-    height: 75vh;
-    text-align: center;
-    padding: 0 15px;
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
+  .nav-link {
+    padding: 10px 0;
+    font-size: 16px;
   }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .hero .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  
 }
