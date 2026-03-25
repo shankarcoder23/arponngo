@@ -116,12 +116,26 @@ body {
   background: #000;
 }
 
+/* Animation when active */
+.custom-toggler.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.custom-toggler.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.custom-toggler.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
 /* Dropdown Smooth */
 .dropdown-menu {
   border-radius: 10px;
   border: none;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
 
 /* NAV LINK UNDERLINE ANIMATION */
 .navbar .nav-link {
@@ -224,6 +238,65 @@ body {
   font-size: 1.2rem;
 }
 
+/* Hover Glow about */
+.glow-btn:hover {
+  box-shadow: 0 0 15px rgba(252, 255, 253, 0.8),
+              0 0 30px rgba(27, 180, 21, 0.993);
+  transform: translateY(-2px);
+}
+
+/* stories of impact */
+/* Story Card */
+.story-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.story-card {
+  background: linear-gradient(135deg, rgba(227, 233, 228, 0.904), rgba(134, 183, 229, 0.719));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Avatar */
+.story-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Equal text area */
+.story-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* truncate */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #555;
+  flex-grow: 1;
+  transition: 0.3s;
+}
+
+/* Expanded */
+.story-text.expanded {
+  -webkit-line-clamp: unset;
+}
+
+/* Read More */
+.read-more {
+  color: #198754;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+}
+
 .gallery-card {
   overflow: hidden;
   border-radius: 15px;
@@ -262,50 +335,6 @@ body {
   font-weight: 600;
 }
 
-/* Stories of impact */
-.impact-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.impact-card img {
-  height: 220px;
-  object-fit: cover;
-  width: 100%;
-  transition: 0.4s;
-}
-
-.impact-content {
-  padding: 20px;
-}
-
-.impact-card h5 {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.impact-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-.read-more {
-  text-decoration: none;
-  color: #28a745;
-  font-weight: 500;
-}
-
-.impact-card:hover {
-  transform: translateY(-8px);
-}
-
-.impact-card:hover img {
-  transform: scale(1.1);
-}
-
 /* Animated Send message Button */
 .btn-send {
   position: relative;
@@ -330,17 +359,17 @@ footer a:hover {
   transition: 0.3s;
 }
 
+/* Universal Responsive Spacing */
+.custom-margin {
+  margin-bottom: clamp(16px, 3vw, 32px);
+}
 
-@media (max-width: 991px) {
-  .navbar-collapse {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-  }
 
-  .nav-link {
+
+
+    .nav-link {
     padding: 10px 0;
     font-size: 16px;
   }
-}
+
+

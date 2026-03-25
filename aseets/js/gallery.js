@@ -24,3 +24,11 @@
     // Show View More button again
     document.getElementById("viewMoreWrapper").style.display = "block";
   });
+
+
+// Menu togglebae //
+const toggler = document.querySelector(".custom-toggler");
+
+toggler.addEventListener("click", function () {
+  this.classList.toggle("active");
+});
