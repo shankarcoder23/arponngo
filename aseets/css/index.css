@@ -34,6 +34,7 @@ body {
 .top-bar a:hover {
   color: #f5fbff;
 }
+
 /* SOCIAL ICON COLORS (OFFICIAL BRAND COLORS) */
 
 .social-icons a {
@@ -72,14 +73,26 @@ body {
   transform: scale(1.2);
 }
 
-/* Donate Button */
 .btn-donate-top {
-  background: linear-gradient(45deg, #69080d, #000000);
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 15px;
+  background: #ff4d4d;
   color: #fff;
-  transition: 0.3s;
+  padding: 8px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #ff4d4d,
+                0 0 10px #ff4d4d;
+  }
+  to {
+    box-shadow: 0 0 15px #ff4d4d,
+                0 0 25px #ff4d4d,
+                0 0 35px #ff4d4d;
+  }
 }
 
 .btn-donate-top:hover {
@@ -297,44 +310,25 @@ body {
   display: inline-block;
 }
 
-.gallery-card {
-  overflow: hidden;
-  border-radius: 15px;
-  position: relative;
-  cursor: pointer;
-}
-
 .gallery-img {
   width: 100%;
-  transition: transform 0.4s ease;
-  border-radius: 15px;
-}
-
-.gallery-card:hover .gallery-img {
-  transform: scale(1.1);
-}
-
-/* Dark overlay */
-.gallery-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.2);
-  opacity: 0;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
   transition: 0.3s;
-  border-radius: 15px;
 }
 
-.gallery-card:hover::after {
-  opacity: 1;
+.gallery-img:hover {
+  transform: scale(1.05);
 }
 
-/* Button style */
-#viewMoreBtn {
-  border-radius: 30px;
-  font-weight: 600;
+/* Bigger images on desktop */
+@media (min-width: 768px) {
+  .gallery-img {
+    height: 160px;
+  }
 }
-
 /* Animated Send message Button */
 .btn-send {
   position: relative;

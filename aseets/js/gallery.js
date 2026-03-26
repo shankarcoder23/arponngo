@@ -1,34 +1,32 @@
+  const toggler = document.querySelector(".navbar-toggler");
 
-  const viewMoreBtn = document.getElementById("viewMoreBtn");
-  const showLessBtn = document.getElementById("showLessBtn");
-  const fullGallery = document.getElementById("fullGallerySection");
-
-  // Show Full Gallery
-  viewMoreBtn.addEventListener("click", function () {
-    fullGallery.classList.remove("d-none");
-
-    // Smooth scroll to gallery
-    fullGallery.scrollIntoView({ behavior: "smooth" });
-
-    // Hide View More button
-    document.getElementById("viewMoreWrapper").style.display = "none";
+  toggler.addEventListener("click", function () {
+    this.classList.toggle("active");
   });
+  // View More
+  document.getElementById("viewMoreBtn").onclick = function () {
+    document.getElementById("fullGallery").classList.remove("d-none");
+    this.style.display = "none";
+  };
 
-  // Hide Full Gallery
-  showLessBtn.addEventListener("click", function () {
-    fullGallery.classList.add("d-none");
+  // Show Less
+  document.getElementById("showLessBtn").onclick = function () {
+    document.getElementById("fullGallery").classList.add("d-none");
+    document.getElementById("viewMoreBtn").style.display = "inline-block";
+    window.scrollTo({
+      top: document.getElementById("gallery").offsetTop - 50,
+      behavior: "smooth"
+    });
+  };
 
-    // Scroll back to carousel
-    document.getElementById("galleryCarousel").scrollIntoView({ behavior: "smooth" });
+  // Image Click → Modal
+  document.querySelectorAll(".gallery-img").forEach(img => {
+    img.addEventListener("click", function () {
+      document.getElementById("modalImage").src = this.src;
+      document.getElementById("modalTitle").innerText = this.dataset.title;
+      document.getElementById("modalDate").innerText = this.dataset.date;
 
-    // Show View More button again
-    document.getElementById("viewMoreWrapper").style.display = "block";
+      let modal = new bootstrap.Modal(document.getElementById("galleryModal"));
+      modal.show();
+    });
   });
-
-
-// Menu togglebae //
-const toggler = document.querySelector(".custom-toggler");
-
-toggler.addEventListener("click", function () {
-  this.classList.toggle("active");
-});

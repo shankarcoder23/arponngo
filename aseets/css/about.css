@@ -6,6 +6,25 @@
   margin-top: 70px;
 }
 
+/* Custom Hamburger */
+.custom-toggler {
+  border: none;
+  outline: none;
+}
+
+.custom-toggler span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background: #28a745;
+  transition: 0.3s;
+}
+/* Animation */
+.custom-toggler:hover span {
+  background: #000;
+}
+
 /* CTA Section */
 .cta {
   background: linear-gradient(to right, #8bc343, #2a93c0);
