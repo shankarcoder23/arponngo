@@ -1,0 +1,191 @@
+/* Colors */
+:root {
+  --primary: #8bc343;
+  --secondary: #2a93c0;
+}
+
+/* General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  background: linear-gradient(to right, #b0e0f5, #2a6b3e);
+  color: #286dbd;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.top-bar a:hover {
+  color: #f5fbff;
+}
+
+/* SOCIAL ICON COLORS (OFFICIAL BRAND COLORS) */
+
+.social-icons a {
+  font-size: 18px;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+/* Facebook */
+.social-icons a.facebook {
+  color: #1877F2;
+}
+
+/* Instagram */
+.social-icons a.instagram {
+  color: #E4405F;
+}
+
+/* Twitter (X) */
+.social-icons a.twitter {
+  color: #000000;
+}
+
+/* YouTube */
+.social-icons a.youtube {
+  color: #FF0000;
+}
+
+/* WhatsApp */
+.social-icons a.whatsapp {
+  color: #25D366;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.btn-donate-top {
+  background: #ff4d4d;
+  color: #fff;
+  padding: 5px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #ff4d4d,
+                0 0 10px #ff4d4d;
+  }
+  to {
+    box-shadow: 0 0 15px #ff4d4d,
+                
+  }
+}
+
+.btn-donate-top:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar Fix after topbar */
+.navbar {
+  top: 45px;
+}
+
+/* Mobile Icons */
+.nav-link i {
+  font-size: 18px;
+}
+
+/* Custom Hamburger */
+.custom-toggler {
+  border: none;
+  outline: none;
+}
+
+.custom-toggler span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background: #28a745;
+  transition: 0.3s;
+}
+
+/* Animation */
+.custom-toggler:hover span {
+  background: #000;
+}
+
+/* Animation when active */
+.custom-toggler.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.custom-toggler.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.custom-toggler.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Dropdown Smooth */
+.dropdown-menu {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+/* NAV LINK UNDERLINE ANIMATION */
+.navbar .nav-link {
+  position: relative;
+  color: #333;
+  transition: 0.3s;
+}
+
+/* underline hidden */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #198754; /* Bootstrap success color */
+  transition: width 0.3s ease;
+}
+
+/* hover effect */
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* active link underline */
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* optional active color */
+.navbar .nav-link.active {
+  color: #198754 !important;
+}
+
+
+/* DROPDOWN HOVER (Desktop only) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}

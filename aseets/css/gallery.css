@@ -1,0 +1,135 @@
+/* ===== BODY ===== */
+body {
+  background: #f8f9fa;
+}
+
+/* ===== TITLE ===== */
+h2 {
+  color: #198754;
+}
+
+/* ===== TABS ===== */
+.nav-pills .nav-link {
+  border-radius: 30px;
+  padding: 8px 20px;
+  border: 1px solid #198754;
+  color: #198754;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.nav-pills .nav-link.active {
+  background: #198754;
+  color: #fff;
+}
+
+/* ===== GALLERY CARD ===== */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* ===== IMAGE FIX (CLEAN SINGLE RULE) ===== */
+.gallery-img {
+  width: 100%;
+  height: 140px;              /* Mobile default */
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+
+/* Tablet */
+@media (min-width: 576px) {
+  .gallery-img {
+    height: 180px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .gallery-img {
+    height: 220px;
+  }
+}
+
+/* ===== HOVER EFFECT ===== */
+.gallery-card:hover .gallery-img {
+  transform: scale(1.08);
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.overlay span {
+  color: #fff;
+  background: #198754;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
+}
+
+/* ===== VIDEO ===== */
+.video-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ===== MODAL PERFECT FIX ===== */
+.modal-dialog {
+  max-width: 900px;
+}
+
+/* Dark background */
+.modal-content {
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* IMAGE INSIDE MODAL */
+#modalImage {
+  width: 100%;
+  max-height: 80vh;           /* Desktop perfect fit */
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Caption */
+#modalCaption {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* Close button */
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+/* ===== MOBILE MODAL FIX ===== */
+@media(max-width:768px){
+  #modalImage {
+    max-height: 60vh;
+  }
+}

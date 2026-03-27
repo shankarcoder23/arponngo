@@ -36,9 +36,75 @@
   transition: 0.3s;
 }
 
+/* TEAM SECTION */
+.team-card {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.team-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* Overlay */
+.team-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  opacity: 0;
+  transition: 0.4s;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Social Icons */
+.team-social a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.team-social a:hover {
+  color: #20c997;
+}
+
+/* Hover Effects */
+.team-card:hover img {
+  transform: scale(1.1);
+}
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Text */
+.team-info {
+  padding: 15px;
+}
+
+
+
 /* Responsive Fix */
 @media (max-width: 768px) {
   .about-hero {
     height: 40vh;
   }
+   .team-card img {
+    height: 220px;
+  }
+
+  
 }
