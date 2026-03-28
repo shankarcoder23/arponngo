@@ -1,0 +1,153 @@
+
+
+/* ===== COLORS ===== */
+:root {
+  --primary-green: #2e7d32;
+  --primary-blue: #1976d2;
+  --light-bg: #f8f9fa;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.hero-section p {
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  font-weight: 700;
+  color: #000;
+}
+
+.section-subtitle {
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+.partner-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.4s;
+  border: 1px solid #eee;
+  height: 100%;
+}
+
+.partner-card img {
+  max-height: 55px;
+  margin-bottom: 15px;
+  
+  transition: 0.4s;
+}
+
+.partner-card h6 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* HOVER EFFECT */
+.partner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(45, 140, 218, 0.719);
+}
+
+.partner-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* CORNER ANIMATION */
+.corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #309e36;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.top-right {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+.partner-card:hover .corner {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  background: linear-gradient(45deg, var(--primary-green), var(--primary-blue));
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cta-btn {
+  background: #fff;
+  color: var(--primary-blue);
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #e3f2fd;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 70px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+}
+
