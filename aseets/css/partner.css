@@ -151,3 +151,48 @@
   }
 }
 
+/* Partner Form */
+/* MODAL DESIGN */
+.partner-modal {
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ffffff, #f1f8f4);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+/* INPUT STYLE */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 0.2rem rgba(46,125,50,0.15);
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  background: linear-gradient(45deg, #2e7d32, #1976d2);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* MODAL ANIMATION */
+.modal.fade .modal-dialog {
+  transform: translateY(50px);
+  transition: 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+}
