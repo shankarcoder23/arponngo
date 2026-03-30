@@ -128,7 +128,7 @@ h2 {
   <i class="bi bi-chevron-down ms-1 dropdown-arrow"></i>
 </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Healthcare</a></li>
+            <li><a class="dropdown-item" href="healthcare.html">Healthcare</a></li>
             <li><a class="dropdown-item" href="#">Education</a></li>
           </ul>
         </li>
@@ -173,6 +173,8 @@ h2 {
   }
 </style>
 
+
+<!-- ================= VOLUNTEER FORM ================= -->
 <section class="py-5 volunteer-section">
   <div class="container">
     
@@ -183,104 +185,63 @@ h2 {
 
         <div class="card volunteer-card p-4 shadow">
 
-          <!-- Why Join Us Modern -->
-<div class="mb-4">
+          <!-- Description -->
+          <div class="text-center mb-3">
+            <p class="text-muted small">
+              আমাৰ সৈতে স্বেচ্ছাসেৱক হিচাপে যোগদান কৰক আৰু সমাজৰ উন্নয়নত আপোনাৰ অৱদান আগবঢ়াওক।
+              <br>
+              Join us as a volunteer and contribute to building a better community.
+            </p>
+          </div>
 
-  <h5 class="fw-bold text-center mb-4">
-    কিয় আমাৰ সৈতে যোগদান কৰিব? (Why Join Us?)
-  </h5>
-
-  <div class="row g-3">
-
-    <div class="col-6">
-      <div class="why-card text-center p-3">
-        <div class="icon">💚</div>
-        <p>সমাজৰ সেৱা কৰক<br><small>(Serve Community)</small></p>
-      </div>
-    </div>
-
-    <div class="col-6">
-      <div class="why-card text-center p-3">
-        <div class="icon">📚</div>
-        <p>দক্ষতা উন্নত কৰক<br><small>(Build Skills)</small></p>
-      </div>
-    </div>
-
-    <div class="col-6">
-      <div class="why-card text-center p-3">
-        <div class="icon">🤝</div>
-        <p>সংযোগ গঢ়ক<br><small>(Make Connections)</small></p>
-      </div>
-    </div>
-
-    <div class="col-6">
-      <div class="why-card text-center p-3">
-        <div class="icon">🌍</div>
-        <p>পৰিৱৰ্তন আনক<br><small>(Create Impact)</small></p>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
+          <!-- FORM -->
           <form id="volunteerForm">
 
-            <!-- Name -->
             <div class="form-floating mb-3">
               <input type="text" class="form-control" placeholder="নাম (Name)" required>
               <label>নাম (Name)</label>
             </div>
 
-            <!-- Father Name -->
             <div class="form-floating mb-3">
               <input type="text" class="form-control" placeholder="পিতৃৰ নাম (Father Name)" required>
               <label>পিতৃৰ নাম (Father Name)</label>
             </div>
 
-            <!-- Mother Name -->
             <div class="form-floating mb-3">
               <input type="text" class="form-control" placeholder="মাতৃৰ নাম (Mother Name)" required>
               <label>মাতৃৰ নাম (Mother Name)</label>
             </div>
 
-            <!-- DOB -->
             <div class="form-floating mb-3">
               <input type="date" class="form-control" required>
               <label>জন্মৰ তাৰিখ (Date of Birth)</label>
             </div>
 
-            <!-- Birth Place -->
             <div class="form-floating mb-3">
               <input type="text" class="form-control" placeholder="জন্মৰ স্থান (Birth Place)" required>
               <label>জন্মৰ স্থান (Birth Place)</label>
             </div>
 
-            <!-- Mother Tongue -->
             <div class="form-floating mb-3">
               <input type="text" class="form-control" placeholder="মাতৃভাষা (Mother Tongue)" required>
               <label>মাতৃভাষা (Mother Tongue)</label>
             </div>
 
-            <!-- Current Address -->
             <div class="form-floating mb-3">
               <textarea class="form-control" style="height: 100px;" placeholder="বৰ্তমান ঠিকনা (Current Address)" required></textarea>
               <label>বৰ্তমান ঠিকনা (Current Address)</label>
             </div>
 
-            <!-- Email -->
             <div class="form-floating mb-3">
               <input type="email" class="form-control" placeholder="Email Address" required>
               <label>Email Address</label>
             </div>
 
-            <!-- Phone -->
             <div class="form-floating mb-3">
               <input type="tel" class="form-control" placeholder="Phone Number" required>
               <label>Phone Number</label>
             </div>
 
-            <!-- Interest -->
             <div class="mb-3">
               <select class="form-select" required>
                 <option selected disabled>Choose Interest (আগ্ৰহৰ ক্ষেত্ৰ)</option>
@@ -290,21 +251,18 @@ h2 {
               </select>
             </div>
 
-            <!-- Reason -->
             <div class="form-floating mb-3">
-              <textarea class="form-control" style="height: 100px;" placeholder="Why volunteer?"></textarea>
+              <textarea class="form-control" style="height: 100px;"></textarea>
               <label>আপুনি কিয় স্বেচ্ছাসেৱক হ'ব বিচাৰে? (Why do you want to volunteer?)</label>
             </div>
 
-            <!-- Button -->
-            <button class="btn btn-success w-100" id="submitBtn"
+            <button class="btn btn-success w-100"
               style="background: linear-gradient(rgba(51, 177, 51, 0.726), rgb(11, 92, 31));">
-              <span id="btnText">Submit Application</span>
+              Submit Application
             </button>
 
-            <!-- Success Message -->
-            <div class="alert alert-success mt-3 d-none success-box text-center" id="successMsg">
-               Thank you! We will contact you soon.
+            <div class="alert alert-success mt-3 d-none text-center">
+              Thank you! We will contact you soon.
             </div>
 
           </form>
@@ -312,6 +270,49 @@ h2 {
         </div>
 
       </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WHY JOIN US (SEPARATE) ================= -->
+<section class="py-5 why-section">
+  <div class="container">
+
+    <h3 class="text-center fw-bold mb-4">
+      কিয় আমাৰ সৈতে যোগদান কৰিব? (Why Join Us?)
+    </h3>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="why-card text-center p-4">
+          <div class="icon">💚</div>
+          <p>সমাজৰ সেৱা কৰক<br><small>(Serve Community)</small></p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="why-card text-center p-4">
+          <div class="icon">📚</div>
+          <p>দক্ষতা উন্নত কৰক<br><small>(Build Skills)</small></p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="why-card text-center p-4">
+          <div class="icon">🤝</div>
+          <p>সংযোগ গঢ়ক<br><small>(Make Connections)</small></p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-6">
+        <div class="why-card text-center p-4">
+          <div class="icon">🌍</div>
+          <p>পৰিৱৰ্তন আনক<br><small>(Create Impact)</small></p>
+        </div>
+      </div>
+
     </div>
 
   </div>
