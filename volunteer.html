@@ -164,51 +164,145 @@ h2 {
   </div>
 </nav>
 
+<!-- Assamese Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  .volunteer-section {
+    font-family: 'Noto Sans Bengali', sans-serif;
+  }
+</style>
+
 <section class="py-5 volunteer-section">
   <div class="container">
     
     <h2 class="text-center fw-bold mb-4">Become a Volunteer</h2>
 
     <div class="row justify-content-center">
-      <div class="col-lg-5 col-md-7 col-sm-12">
+      <div class="col-lg-6 col-md-8 col-sm-12">
 
-        <div class="card volunteer-card p-4">
+        <div class="card volunteer-card p-4 shadow">
+
+          <!-- Why Join Us Modern -->
+<div class="mb-4">
+
+  <h5 class="fw-bold text-center mb-4">
+    কিয় আমাৰ সৈতে যোগদান কৰিব? (Why Join Us?)
+  </h5>
+
+  <div class="row g-3">
+
+    <div class="col-6">
+      <div class="why-card text-center p-3">
+        <div class="icon">💚</div>
+        <p>সমাজৰ সেৱা কৰক<br><small>(Serve Community)</small></p>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="why-card text-center p-3">
+        <div class="icon">📚</div>
+        <p>দক্ষতা উন্নত কৰক<br><small>(Build Skills)</small></p>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="why-card text-center p-3">
+        <div class="icon">🤝</div>
+        <p>সংযোগ গঢ়ক<br><small>(Make Connections)</small></p>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="why-card text-center p-3">
+        <div class="icon">🌍</div>
+        <p>পৰিৱৰ্তন আনক<br><small>(Create Impact)</small></p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
           <form id="volunteerForm">
 
+            <!-- Name -->
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" placeholder="Full Name" required>
-              <label>Full Name</label>
+              <input type="text" class="form-control" placeholder="নাম (Name)" required>
+              <label>নাম (Name)</label>
             </div>
 
+            <!-- Father Name -->
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" placeholder="পিতৃৰ নাম (Father Name)" required>
+              <label>পিতৃৰ নাম (Father Name)</label>
+            </div>
+
+            <!-- Mother Name -->
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" placeholder="মাতৃৰ নাম (Mother Name)" required>
+              <label>মাতৃৰ নাম (Mother Name)</label>
+            </div>
+
+            <!-- DOB -->
+            <div class="form-floating mb-3">
+              <input type="date" class="form-control" required>
+              <label>জন্মৰ তাৰিখ (Date of Birth)</label>
+            </div>
+
+            <!-- Birth Place -->
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" placeholder="জন্মৰ স্থান (Birth Place)" required>
+              <label>জন্মৰ স্থান (Birth Place)</label>
+            </div>
+
+            <!-- Mother Tongue -->
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" placeholder="মাতৃভাষা (Mother Tongue)" required>
+              <label>মাতৃভাষা (Mother Tongue)</label>
+            </div>
+
+            <!-- Current Address -->
+            <div class="form-floating mb-3">
+              <textarea class="form-control" style="height: 100px;" placeholder="বৰ্তমান ঠিকনা (Current Address)" required></textarea>
+              <label>বৰ্তমান ঠিকনা (Current Address)</label>
+            </div>
+
+            <!-- Email -->
             <div class="form-floating mb-3">
               <input type="email" class="form-control" placeholder="Email Address" required>
               <label>Email Address</label>
             </div>
 
+            <!-- Phone -->
             <div class="form-floating mb-3">
               <input type="tel" class="form-control" placeholder="Phone Number" required>
               <label>Phone Number</label>
             </div>
 
+            <!-- Interest -->
             <div class="mb-3">
               <select class="form-select" required>
-                <option selected disabled>Select Area of Interest</option>
+                <option selected disabled>Choose Interest (আগ্ৰহৰ ক্ষেত্ৰ)</option>
                 <option>Healthcare</option>
                 <option>Education</option>
                 <option>Event Support</option>
               </select>
             </div>
 
+            <!-- Reason -->
             <div class="form-floating mb-3">
-              <textarea class="form-control" style="height: 100px;" placeholder="Why do you want to volunteer?"></textarea>
-              <label>Why do you want to volunteer?</label>
+              <textarea class="form-control" style="height: 100px;" placeholder="Why volunteer?"></textarea>
+              <label>আপুনি কিয় স্বেচ্ছাসেৱক হ'ব বিচাৰে? (Why do you want to volunteer?)</label>
             </div>
 
-            <button class="btn btn-success w-100" id="submitBtn" style="background: linear-gradient(rgba(51, 177, 51, 0.726), rgb(11, 92, 31));">
+            <!-- Button -->
+            <button class="btn btn-success w-100" id="submitBtn"
+              style="background: linear-gradient(rgba(51, 177, 51, 0.726), rgb(11, 92, 31));">
               <span id="btnText">Submit Application</span>
             </button>
 
+            <!-- Success Message -->
             <div class="alert alert-success mt-3 d-none success-box text-center" id="successMsg">
                Thank you! We will contact you soon.
             </div>
